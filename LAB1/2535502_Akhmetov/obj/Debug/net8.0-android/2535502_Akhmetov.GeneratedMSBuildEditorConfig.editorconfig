@@ -12,35 +12,35 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = _2535502_Akhmetov
-build_property.ProjectDir = c:\Users\User\Desktop\ispSem4\LAB\LAB1\2535502_Akhmetov\
+build_property.ProjectDir = C:\Users\User\Desktop\ispSem4\LAB\LAB1\2535502_Akhmetov\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 
-[c:/Users/User/Desktop/ispSem4/LAB/LAB1/2535502_Akhmetov/App.xaml]
+[C:/Users/User/Desktop/ispSem4/LAB/LAB1/2535502_Akhmetov/App.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = _2535502_Akhmetov.App.xaml
 build_metadata.AdditionalFiles.TargetPath = App.xaml
 build_metadata.AdditionalFiles.RelativePath = App.xaml
 
-[c:/Users/User/Desktop/ispSem4/LAB/LAB1/2535502_Akhmetov/AppShell.xaml]
+[C:/Users/User/Desktop/ispSem4/LAB/LAB1/2535502_Akhmetov/AppShell.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = _2535502_Akhmetov.AppShell.xaml
 build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
 build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
 
-[c:/Users/User/Desktop/ispSem4/LAB/LAB1/2535502_Akhmetov/MainPage.xaml]
+[C:/Users/User/Desktop/ispSem4/LAB/LAB1/2535502_Akhmetov/MainPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = _2535502_Akhmetov.MainPage.xaml
 build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
 build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
 
-[c:/Users/User/Desktop/ispSem4/LAB/LAB1/2535502_Akhmetov/Resources/Styles/Colors.xaml]
+[C:/Users/User/Desktop/ispSem4/LAB/LAB1/2535502_Akhmetov/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = _2535502_Akhmetov.Resources.Styles.Colors.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
 
-[c:/Users/User/Desktop/ispSem4/LAB/LAB1/2535502_Akhmetov/Resources/Styles/Styles.xaml]
+[C:/Users/User/Desktop/ispSem4/LAB/LAB1/2535502_Akhmetov/Resources/Styles/Styles.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = _2535502_Akhmetov.Resources.Styles.Styles.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml

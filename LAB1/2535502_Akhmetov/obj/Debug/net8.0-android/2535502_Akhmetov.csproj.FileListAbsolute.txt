@@ -1037,3 +1037,4 @@ C:\Users\User\Desktop\ispSem4\LAB\LAB1\2535502_Akhmetov\obj\Debug\net8.0-android
 C:\Users\User\Desktop\ispSem4\LAB\LAB1\2535502_Akhmetov\obj\Debug\net8.0-android\stamp\_ResolveLibraryProjectImports.stamp
 C:\Users\User\Desktop\ispSem4\LAB\LAB1\2535502_Akhmetov\obj\Debug\net8.0-android\android\assets\System.Private.CoreLib.dll
 C:\Users\User\Desktop\ispSem4\LAB\LAB1\2535502_Akhmetov\obj\Debug\net8.0-android\resizetizer\r\drawable\icon.png
+C:\Users\User\Desktop\ispSem4\LAB\LAB1\2535502_Akhmetov\obj\Debug\net8.0-android\2535502_Akhmetov.sourcelink.json

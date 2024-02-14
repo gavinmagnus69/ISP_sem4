@@ -32,6 +32,7 @@
                 Grid.Row = "1"
                 BackgroundColor = "Azure"
                 Text = ""
+
                 HorizontalOptions="Fill" 
                 FontSize = "30"
             
