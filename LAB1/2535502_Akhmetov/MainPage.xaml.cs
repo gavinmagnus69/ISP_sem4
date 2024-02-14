@@ -5,11 +5,10 @@ namespace _2535502_Akhmetov;
 public partial class MainPage : ContentPage
 {
 	string current = "";
+	string answer = "null";
+	string error = "ERROR";
 
-	string current1 = "";
-	string current2 = "";
-	string operation = "";
-	string answer = "";
+	bool error_state = false;
 	List<string> queque;
 
 
@@ -35,7 +34,7 @@ public partial class MainPage : ContentPage
 				queque[2] += "8";
 				
 			}
-			if (queque.Count == 0){
+			if (queque.Count == 0 || queque.Count == 2){
 				queque.Add("8");
 			
 			}
@@ -49,7 +48,7 @@ public partial class MainPage : ContentPage
 				queque[2] += "0";
 				
 			}
-			if (queque.Count == 0){
+			if (queque.Count == 0 || queque.Count == 2){
 				queque.Add("0");
 			
 			}	
@@ -63,7 +62,7 @@ public partial class MainPage : ContentPage
 				queque[2] += "1";
 				
 			}
-			if (queque.Count == 0){
+			if (queque.Count == 0 || queque.Count == 2){
 				queque.Add("1");
 			
 			}
@@ -77,7 +76,7 @@ public partial class MainPage : ContentPage
 				queque[2] += "2";
 				
 			}
-			if (queque.Count == 0){
+			if (queque.Count == 0 || queque.Count == 2){
 				queque.Add("2");
 			
 			}
@@ -91,7 +90,7 @@ public partial class MainPage : ContentPage
 				queque[2] += "3";
 				
 			}
-			if (queque.Count == 0){
+			if (queque.Count == 0 || queque.Count == 2){
 				queque.Add("3");
 			
 			}
@@ -105,7 +104,7 @@ public partial class MainPage : ContentPage
 				queque[2] += "4";
 				
 			}
-			if (queque.Count == 0){
+			if (queque.Count == 0 || queque.Count == 2){
 				queque.Add("4");
 			
 			}
@@ -119,7 +118,7 @@ public partial class MainPage : ContentPage
 				queque[2] += "5";
 				
 			}
-			if (queque.Count == 0){
+			if (queque.Count == 0 || queque.Count == 2){
 				queque.Add("5");
 			
 			}
@@ -133,7 +132,7 @@ public partial class MainPage : ContentPage
 				queque[2] += "6";
 				
 			}
-			if (queque.Count == 0){
+			if (queque.Count == 0 || queque.Count == 2){
 				queque.Add("6");
 			
 			}	
@@ -147,7 +146,7 @@ public partial class MainPage : ContentPage
 				queque[2] += "7";
 				
 			}
-			if (queque.Count == 0){
+			if (queque.Count == 0 || queque.Count == 2){
 				queque.Add("7");
 			
 			}
@@ -161,16 +160,12 @@ public partial class MainPage : ContentPage
 				queque[2] += "9";
 				
 			}
-			if (queque.Count == 0){
+			if (queque.Count == 0 || queque.Count == 2){
 				queque.Add("9");
 			
 			}
 		}
 		if ((Button)sender == ClearAllBtn ){
-			current = "";
-			current1 = "";
-			current2 = "";
-			operation = "";
 			queque.Clear();
 		}
 
@@ -208,15 +203,146 @@ public partial class MainPage : ContentPage
 					queque.RemoveAt(0);
 				}
 			}
-		} 
+		}
 
-			current = "";
-			foreach(var i in queque){
-				current += i;
+		if( (Button)sender == XDivBtn){
+			if (queque.Count == 1){
+				double tmp = double.Parse(queque[0]);
+				if(tmp != 0){
+					tmp = 1 / tmp;
+					queque[0] = tmp.ToString();
+
+				}
+				else{
+					error_state = true;
+					answer = error;
+					queque.Clear();
+				}	
 			}
-			ShowLabel.Text = current;
+		}
+
+		if ((Button)sender == Pow2Btn){
+			if (queque.Count == 1){
+				double tmp = double.Parse(queque[0]);
+				tmp = Math.Pow(tmp, 2);
+				queque[0] = tmp.ToString();
+			}
+		}
+		if ((Button)sender == DivBtn){
+			if (queque.Count == 1){
+				queque.Add("/");
+			}
+		}
+
+		if((Button)sender == MulBtn){
+			if (queque.Count == 1){
+				queque.Add("*");
+			}
+		}
+
+		if((Button)sender == AddBtn){
+			if (queque.Count == 1){
+				queque.Add("+");
+			}
+		}
+
+		if ((Button)sender == SubBtn){
+			if (queque.Count == 1){
+				queque.Add("-");
+			}
+		}
+
+		if((Button)sender == SqrBtn){
+			if (queque.Count == 1){
+				double tmp = double.Parse(queque[0]);
+				if(tmp >= 0){
+					tmp = Math.Pow(tmp, 0.5);
+					answer = tmp.ToString();
+				}
+				else{
+					error_state = true;
+					answer = error;
+				}
+
+			}
+		}
+
+		if((Button)sender == Pow10Btn){
+			if(queque.Count == 1){
+				double tmp = double.Parse(queque[0]);
+				tmp = Math.Pow(10, tmp);
+				answer = tmp.ToString();
+			}
+		}
+
+
+
+		// = handling
+		if((Button)sender == CalcBtn){
+			if(queque.Count == 3){
+				double equ1 = double.Parse(queque[0]);
+				double equ2 = double.Parse(queque[2]);
+				double ans = 0;
+				if(queque[1] == "/"){
+					if(equ2 != 0){
+						ans = equ1 / equ2;
+						answer = ans.ToString();
+					}
+					else{
+						error_state = true;
+						answer = error;
+						//queque.Clear();
+					}
+				}
+				if(queque[1] == "*"){
+					ans = equ1 * equ2;
+					answer = ans.ToString();
+				}
+				if(queque[1] == "+"){
+					ans = equ1 + equ2;
+					answer = ans.ToString();
+				}
+				if(queque[1] == "-"){
+					ans = equ1 - equ2;
+					answer = ans.ToString();
+				}
+			}
+
+
+
+		}
+
+			//show queque in gui first label
+			current = "";
+			if (error_state){
+				ShowLabel.Text = "Occured some";
+				//error_state = false;
+			}
+			else{
+				foreach(var i in queque){
+					current += i;
+				}
+				ShowLabel.Text = current;
+			}
 			SemanticScreenReader.Announce(ShowLabel.Text);
-		
+
+
+
+			//show answer in gui second label
+			if (answer != "null"){
+				AnswerLabel.Text = answer;
+				SemanticScreenReader.Announce(AnswerLabel.Text);
+				queque.Clear();
+				if(!error_state){
+					queque.Add(answer);
+				}
+				error_state = false;
+				answer = "null";
+			}
+			else{
+				AnswerLabel.Text = "";
+				SemanticScreenReader.Announce(AnswerLabel.Text);
+			}
 	}
 }
 

@@ -11,7 +11,8 @@
             <Grid.RowDefinitions>
                 
                  <RowDefinition Height ="50" />
-                 <RowDefinition Height = "250"/>
+                 <RowDefinition Height = "150"/>
+                 <RowDefinition Height = "150"/>
                  <RowDefinition />
                         
             </Grid.RowDefinitions>
@@ -38,11 +39,19 @@
             
             
             />
+            <Label
+                x:Name = "AnswerLabel"
+                Grid.Row = "2"
+                BackgroundColor = "Azure"
+                Text = ""
+                HorizontalOptions="Fill" 
+                FontSize = "30"
+            />
 
             <Grid
-             Grid.Row = "2"
-             RowSpacing="10"
-             ColumnSpacing="10"
+             Grid.Row = "3"
+             RowSpacing="3"
+             ColumnSpacing="3"
              BackgroundColor = "Azure"
              >
                                 
@@ -106,7 +115,7 @@
                                     Clicked="OnCounterClicked"
                                     HorizontalOptions="Fill"   Grid.Column="3" Grid.Row="0" />
                                 <Button  
-                                    x:Name="XDixBtn"
+                                    x:Name="XDivBtn"
                                     BackgroundColor="White"
                                     TextColor = "Black"
                                     BorderColor = "Black"
