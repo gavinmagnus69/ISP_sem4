@@ -8,6 +8,7 @@ public partial class MainPage : ContentPage
 	string answer = "null";
 	string error = "ERROR";
 
+	bool opr1_float = false;
 	bool error_state = false;
 	List<string> queque;
 
@@ -18,6 +19,13 @@ public partial class MainPage : ContentPage
 	{
 		InitializeComponent();
 		queque = new();
+	}
+
+	private bool FloatCheck(string opr){
+		if(opr.Contains(".")){
+			return true;
+		}
+		return false;
 	}
 
 	private void OnCounterClicked(object sender, EventArgs e)
@@ -275,7 +283,34 @@ public partial class MainPage : ContentPage
 			}
 		}
 
+		if ((Button)sender == ChngBtn){
+			if (queque.Count == 1){
+				double tmp = double.Parse(queque[0]);
+				tmp *= -1;
+				queque[0] = tmp.ToString();
+			}
+			if (queque.Count == 3){
+				double tmp = double.Parse(queque[2]);
+				tmp *= -1;
+				queque[2] = tmp.ToString();
+			}
+		}
 
+		if((Button)sender == ComBtn){
+			if (queque.Count == 1){
+				if (!FloatCheck(queque[0])){
+					queque[0] += ".";
+				}
+			}
+			else if(queque.Count == 0){
+				queque.Add("0.");
+			}
+			else if(queque.Count == 3){
+				if(!FloatCheck(queque[2])){
+					queque[2] += ".";
+				}
+			}
+		}
 
 		// = handling
 		if((Button)sender == CalcBtn){
@@ -324,6 +359,8 @@ public partial class MainPage : ContentPage
 				}
 				ShowLabel.Text = current;
 			}
+
+			
 			SemanticScreenReader.Announce(ShowLabel.Text);
 
 
