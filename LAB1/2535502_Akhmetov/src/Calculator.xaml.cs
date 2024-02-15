@@ -6,7 +6,6 @@ public partial class Calculator : ContentPage
 	string answer = "null";
 	string error = "ERROR";
 
-	bool opr1_float = false;
 	bool error_state = false;
 	List<string> queque;
 

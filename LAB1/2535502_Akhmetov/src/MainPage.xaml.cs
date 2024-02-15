@@ -4,6 +4,11 @@ namespace _2535502_Akhmetov;
 
 public partial class MainPage : ContentPage
 {
+    public MainPage(){
+        InitializeComponent();
+    }
 	
+
+
 }
 

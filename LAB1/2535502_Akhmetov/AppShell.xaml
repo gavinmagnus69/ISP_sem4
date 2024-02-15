@@ -20,6 +20,14 @@
         />
     </FlyoutItem>
 
+    <FlyoutItem Title = "Sinus">
+        <ShellContent
+            Title = "Sinus"
+            ContentTemplate = "{DataTemplate local:Sinus}"
+            Route = "Sinus"
+        />
+    </FlyoutItem>    
+
 </Shell>
 
 
