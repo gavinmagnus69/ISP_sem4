@@ -4,14 +4,21 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:_2535502_Akhmetov"
-    Shell.FlyoutBehavior="Disabled"
+    Shell.FlyoutBehavior="Flyout"
     Title="_2535502_Akhmetov">
-
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
-    
+    <FlyoutItem Title = "Main">
+        <ShellContent
+            Title="Home"
+            ContentTemplate="{DataTemplate local:MainPage}"
+            Route="MainPage" />
+    </FlyoutItem>
+    <FlyoutItem Title = "Calculator">
+        <ShellContent
+            Title = "Calculator"
+            ContentTemplate = "{DataTemplate local:Calculator}"
+            Route = "Calculator"
+        />
+    </FlyoutItem>
 
 </Shell>
 
