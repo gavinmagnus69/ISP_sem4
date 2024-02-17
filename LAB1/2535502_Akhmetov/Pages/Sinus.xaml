@@ -21,21 +21,22 @@
             <Label
                 x:Name = "StateLabel"
                 Text = "Welcome to .NET MAUI!"
+                TextColor = "#512bd4"
                 Grid.Row = "0"
-                BackgroundColor = "Green"
+                BackgroundColor = "White"
                 HorizontalOptions = "Center"
                 VerticalOptions = "Center"
              />
              <Label
-                BackgroundColor = "Blue"
+                BackgroundColor = "White"
                 Grid.Row = "1"
               />
               <Label
-                BackgroundColor = "Red"
+                BackgroundColor = "White"
                 Grid.Row = "2"
               />
 
-              <HorizontalStackLayout Grid.Row = "3" Padding = "20">
+              <HorizontalStackLayout Grid.Row = "3" Padding = "10">
                     <ProgressBar
                         x:Name = "ProgressSlider"
                         ProgressColor = "#512bd4"
@@ -45,6 +46,7 @@
                     
                     />
                     <Label
+                        Padding = "10"
                         x:Name = "ProgressLabel"
                         Text = "0 %"
                         TextColor = "Black"
@@ -55,7 +57,7 @@
                     /> 
               </HorizontalStackLayout>
               <Label
-                BackgroundColor = "Green"
+                BackgroundColor = "White"
                 Grid.Row = "4"
               />
               <Grid BackgroundColor = "White" Grid.Row = "5">
@@ -82,6 +84,7 @@
                         BackgroundColor = "#512bd4"
                         WidthRequest = "125"
                         HeightRequest = "35"
+                        Clicked = "OnCancel"
                     />
 
 
