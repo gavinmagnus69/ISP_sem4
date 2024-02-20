@@ -46,6 +46,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = _2535502_Akhmetov.Pages.Si
 build_metadata.AdditionalFiles.TargetPath = Pages\Sinus.xaml
 build_metadata.AdditionalFiles.RelativePath = Pages\Sinus.xaml
 
+[C:/Users/User/Desktop/ispSem4/LAB/LAB1/2535502_Akhmetov/Pages/SQLiteDemo.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = _2535502_Akhmetov.Pages.SQLiteDemo.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\SQLiteDemo.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\SQLiteDemo.xaml
+
 [C:/Users/User/Desktop/ispSem4/LAB/LAB1/2535502_Akhmetov/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = _2535502_Akhmetov.Resources.Styles.Colors.xaml

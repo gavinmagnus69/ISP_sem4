@@ -4,12 +4,22 @@ public class SQLiteService : IDbService{
 
     public SQLiteConnection db_authors;
     public SQLiteConnection db_books;
-    private string db_name1 = "authors.db3";
-    private string db_name2 = "books.db3";
+    private string db_name1 = "authors.db";
+    private string db_name2 = "books.db";
 
 
     public SQLiteService(){
-        this.Init();
+        string path1 = Path.Combine (
+        Environment.GetFolderPath (Environment.SpecialFolder.LocalApplicationData),
+        db_name1);
+        string path2 = Path.Combine (
+        Environment.GetFolderPath (Environment.SpecialFolder.LocalApplicationData),
+        db_name2);
+        
+        db_authors = new SQLiteConnection(path1);
+        db_books = new SQLiteConnection(path2);
+        db_authors.CreateTable<Author>();
+        db_books.CreateTable<Book>();
     }
 
 
@@ -31,17 +41,7 @@ public class SQLiteService : IDbService{
     
 
     public void Init(){
-        string path1 = Path.Combine (
-        Environment.GetFolderPath (Environment.SpecialFolder.Personal),
-        db_name1);
-        string path2 = Path.Combine (
-        Environment.GetFolderPath (Environment.SpecialFolder.Personal),
-        db_name2);
         
-        db_authors = new SQLiteConnection(path1);
-        db_books = new SQLiteConnection(path2);
-        db_authors.CreateTable<Author>();
-        db_books.CreateTable<Book>();
         List<string> auth = new List<string>{"Толстой", "Достоевский", "Чехов"};
         List<string> Tolstoy = new List<string>{"Война и мир", "Анна Каренина", "Детство", "Посое бала", "Воскресение", "Отрочество", "Юность"};
         List<string> Dost = new List<string>{"Преступление и наказание", "Братья Карамазовы", "Белые ночи", "Бесы", "Игрок", "Подросток", "Двойник"};

@@ -26,6 +26,13 @@
             ContentTemplate = "{DataTemplate local:Sinus}"
             Route = "Sinus"
         />
+    </FlyoutItem>
+    <FlyoutItem Title = "SQLiteDemo">
+        <ShellContent
+            Title = "SQLiteDemo"
+            ContentTemplate = "{DataTemplate local:SQLiteDemo}"
+            Route = "SQLiteDemo"
+        />
     </FlyoutItem>    
 
 </Shell>

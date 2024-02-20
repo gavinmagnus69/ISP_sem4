@@ -1,5 +1,3 @@
-using Android.Graphics;
-using Xamarin.Google.ErrorProne.Annotations;
 
 namespace _2535502_Akhmetov;
 

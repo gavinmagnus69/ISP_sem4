@@ -6,7 +6,11 @@ public static class MauiProgram
 {
 	public static MauiApp CreateMauiApp()
 	{
+		//services.AddTransient<IDbService, SQLiteService>();
+		
 		var builder = MauiApp.CreateBuilder();
+		builder.Services.AddTransient<IDbService, SQLiteService>();
+		//var sql = new SQLiteService();
 		builder.UseMauiApp<App>().ConfigureFonts(fonts =>
 			{
 				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
