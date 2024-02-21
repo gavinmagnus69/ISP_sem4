@@ -1,5 +1,6 @@
 namespace _2535502_Akhmetov;
 
+using System.Diagnostics;
 using System.Linq.Expressions;
 using SQLite;
 
@@ -7,22 +8,23 @@ using SQLite;
 public partial class SQLiteDemo : ContentPage
 {
 
-
-    SQLiteService sql;
     public SQLiteDemo(){
+        
+        InitializeComponent();
         try{
-            sql = new SQLiteService();
-            var tmp = new List<String>();
-            foreach(var i in sql.GetAllAuthors()){
-                tmp.Add(i.name);
+            var serviceProvider = MauiProgram.services.BuildServiceProvider();
+            MauiProgram.dbService = serviceProvider.GetService<IDbService>();
+            MauiProgram.dbService.Init();
+            foreach(var i in MauiProgram.dbService.GetAllAuthors()){
+                 this.authors.Items.Add(i.name);
+                 //Debug.WriteLine($"xxxxxxxxxxxxxxxxxxx:{i.name}, {tmp.Count}");
                  
             }
-            authors.ItemsSource = tmp; 
+            // authors.ItemsSource = tmp; 
         }
         catch(Exception e){
-            Console.WriteLine(e.Message);
+            Debug.WriteLine("error bebra --------------> {0}" ,e.Message);
         }
-        InitializeComponent();
     }
 
 

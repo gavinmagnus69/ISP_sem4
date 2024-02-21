@@ -18,7 +18,7 @@ public partial class Sinus : ContentPage
 
     public async Task SolveAsync(double left = 0, double right = 1, double d = 0.00000001){
         await Task.Run(async () => {
-            await Device.InvokeOnMainThreadAsync(async () =>
+            await Device.InvokeOnMainThreadAsync(() =>
                     {
                         StateLabel.Text = "Calculating Integral";
                     });
@@ -86,10 +86,16 @@ public partial class Sinus : ContentPage
     
   
     public void OnClicked(object sender, EventArgs e){
-       if(!start_active){
-            start_active = true;
-            SolveAsync(0, 1, 0.0000001);
-       }       
+    //    if(!start_active){
+    //         start_active = true;
+    //         SolveAsync(0, 1, 0.0000001);
+    //    }
+
+
+
+    }
+    public void Del(){
+        Task.Delay(10000);
     }
 
     public void OnCancel(object sender, EventArgs e){

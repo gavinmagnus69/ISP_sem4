@@ -19,11 +19,9 @@
                 x:Name = "authors"
                 Title = "Select an author"
             >
-                <Picker.ItemsSource>
-                    <x:Array Type = "{x:Type x:String}">
-                        
-                    </x:Array>
-                </Picker.ItemsSource>                 
+                <Picker.Items>
+                   
+                </Picker.Items>                 
                 
             </Picker>
             <Label

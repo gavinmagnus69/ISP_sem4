@@ -5,7 +5,7 @@
              BackgroundColor = "#000000"
              >
     
-    <ScrollView BackgroundColor = "#000000">
+   
        
         <Grid BackgroundColor= "#000000" RowSpacing = "15">
             
@@ -385,6 +385,6 @@
 
             </Grid>
         </Grid>
-    </ScrollView>
+   
 
 </ContentPage>

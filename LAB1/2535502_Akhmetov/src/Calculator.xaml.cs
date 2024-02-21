@@ -365,7 +365,7 @@ public partial class Calculator : ContentPage
 			//show answer in gui second label
 			if (answer != "null"){
 				AnswerLabel.Text = answer;
-				SemanticScreenReader.Announce(AnswerLabel.Text);
+				//SemanticScreenReader.Announce(AnswerLabel.Text);
 				queque.Clear();
 				if(!error_state){
 					queque.Add(answer);
@@ -375,7 +375,7 @@ public partial class Calculator : ContentPage
 			}
 			else{
 				AnswerLabel.Text = "";
-				SemanticScreenReader.Announce(AnswerLabel.Text);
+				//SemanticScreenReader.Announce(AnswerLabel.Text);
 			}
 	}
 }
