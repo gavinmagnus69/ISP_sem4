@@ -17,14 +17,15 @@ public partial class SQLiteDemo : ContentPage
             MauiProgram.dbService.Init();
             foreach(var i in MauiProgram.dbService.GetAllAuthors()){
                  this.authors.Items.Add(i.name);
-                 //Debug.WriteLine($"xxxxxxxxxxxxxxxxxxx:{i.name}, {tmp.Count}");
-                 
+               
             }
-            // authors.ItemsSource = tmp; 
         }
         catch(Exception e){
             Debug.WriteLine("error bebra --------------> {0}" ,e.Message);
         }
+    }
+    public void OnPickerIndexChanged(object sender, EventArgs e){
+        //ui shows the books
     }
 
 

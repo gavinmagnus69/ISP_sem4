@@ -34,16 +34,20 @@ public class SQLiteService : IDbService{
         db.CreateTable<Author>();
         db.CreateTable<Book>();
         
-        List<string> auth = new List<string>{"Толстой", "Достоевский", "Чехов"};
-        List<string> Tolstoy = new List<string>{"Война и мир", "Анна Каренина", "Детство", "Посое бала", "Воскресение", "Отрочество", "Юность"};
-        List<string> Dost = new List<string>{"Преступление и наказание", "Братья Карамазовы", "Белые ночи", "Бесы", "Игрок", "Подросток", "Двойник"};
-        List<string> Cheh = new List<string>{"Хамелеон", "Толстый и тонкий", "Тоска", "О любви", "Пари", "Ванька", "Злоумышленник"};
-        
+        var auth = new List<string>{"Толстой", "Достоевский", "Чехов"};
+        var Tolstoy = new List<string>{"Война и мир", "Анна Каренина", "Детство", "Посое бала", "Воскресение", "Отрочество", "Юность"};
+        var Dost = new List<string>{"Преступление и наказание", "Братья Карамазовы", "Белые ночи", "Бесы", "Игрок", "Подросток", "Двойник"};
+        var Cheh = new List<string>{"Хамелеон", "Толстый и тонкий", "Тоска", "О любви", "Пари", "Ванька", "Злоумышленник"};
+       
+        db.DeleteAll<Author>();
+        db.DeleteAll<Book>();
+         Debug.WriteLine("Size of authors db == {0}, {1}", db.Table<Author>().Count(), auth.Count);
         foreach(var i in auth){
             var tmp = new Author();
             tmp.name = i;
             db.Insert(tmp);
         }
+        Debug.WriteLine("Size of authors db == {0}, {1}", db.Table<Author>().Count(), auth.Count);
 
         foreach(var i in db.Table<Author>().ToList()){
             if(i.name == "Толстой"){
