@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="_2535502_Akhmetov.Converter"
+             BackgroundColor = "Black"
+             >
+
+
+            <ScrollView>
+              <Grid RowDefinitions = "*, 3*, 2*">
+                    <Label Grid.Row = "0"
+                            BackgroundColor = "Blue"/>
+                    <Grid Grid.Row = "1"
+                        ColumnDefinitions = "*,*,*"
+                        RowDefinitions = "*">
+                        
+
+                    </Grid>
+                    
+                    <Grid Grid.Row = "2" 
+                        RowDefinitions = "*,*,*,*,*,*"
+                        ColumnDefinitions = "2*,3*,*"
+                        >
+                        <Label
+                            HorizontalOptions = "Center"
+                            VerticalOptions = "Center"
+                            Text = "1 USD ="
+                            BackgroundColor = "Green"/>
+                        <Label
+                            HorizontalOptions = "Center"
+                            VerticalOptions = "Center"
+                            Text = "1 EUR =" 
+                            BackgroundColor = "Black"
+                            Grid.Row = "1" 
+                        />
+                        <Label
+                            HorizontalOptions = "Center"
+                            VerticalOptions = "Center"
+                            Text = "100 RUB =" 
+                            Grid.Row = "2" 
+                            BackgroundColor = "Yellow"/>
+                        <Label
+                            HorizontalOptions = "Center"
+                            VerticalOptions = "Center"
+                            Text = "1 CHF =" 
+                            Grid.Row = "3" 
+                            BackgroundColor = "Green"/>
+                        <Label 
+                            HorizontalOptions = "Center"
+                            VerticalOptions = "Center"
+                            Text = "10 CNY ="
+                            Grid.Row = "4" 
+                            BackgroundColor = "Black"/>
+                        <Label
+                            HorizontalOptions = "Center"
+                            VerticalOptions = "Center"
+                            Text = "1 GBP =" 
+                            Grid.Row = "5" 
+                            BackgroundColor = "Yellow"/>
+                    </Grid>                
+
+
+              </Grid>
+    
+
+            </ScrollView>
+
+</ContentPage>

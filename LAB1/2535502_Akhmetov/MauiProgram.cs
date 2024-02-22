@@ -1,5 +1,6 @@
 ﻿using Android.App;
 using Microsoft.Extensions.Logging;
+using System.Net.Http;
 
 namespace _2535502_Akhmetov;
 
@@ -16,6 +17,7 @@ public static class MauiProgram
 		var builder = MauiApp.CreateBuilder();
 		
 		services.AddTransient<IDbService, SQLiteService>();
+		//services.AddHttpClient<IRateService>(opt => opt.BaseAddress = new Uri("https://www.nbrb.by/api/exrates/rates"));
 		//var sql = new SQLiteService();
 		builder.UseMauiApp<App>().ConfigureFonts(fonts =>
 			{

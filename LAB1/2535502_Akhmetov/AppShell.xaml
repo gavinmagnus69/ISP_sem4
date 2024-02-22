@@ -33,6 +33,13 @@
             ContentTemplate = "{DataTemplate local:SQLiteDemo}"
             Route = "SQLiteDemo"
         />
+    </FlyoutItem>
+    <FlyoutItem Title = "Converter">
+        <ShellContent
+            Title = "Converter"
+            ContentTemplate = "{DataTemplate local:Converter}"
+            Route = "Converter"
+        />
     </FlyoutItem>    
 
 </Shell>
