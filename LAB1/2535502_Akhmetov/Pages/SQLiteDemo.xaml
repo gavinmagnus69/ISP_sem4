@@ -11,7 +11,7 @@
             
 
             <Label
-                BackgroundColor = "Green"
+                BackgroundColor = "Black"
                 Grid.Row = "0"
                 
             />
@@ -25,11 +25,13 @@
                 </Picker.Items>                 
                 
             </Picker>
-            <Label
-                BackgroundColor = "Blue"
-                Grid.Row = "2"
-            />    
-            
+           <CollectionView x:Name="myCollectionView" Grid.Row = "2">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Label Text="{Binding}" />
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
 
         </Grid>
 

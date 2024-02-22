@@ -17,7 +17,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("2535502_Akhmetov")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+6eb941affc519c55d46d6fa48055946d8132536d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+89e53ea3201fdbc7e32ae1359ba7c30e0c87176e")]
 [assembly: System.Reflection.AssemblyProductAttribute("2535502_Akhmetov")]
 [assembly: System.Reflection.AssemblyTitleAttribute("2535502_Akhmetov")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
