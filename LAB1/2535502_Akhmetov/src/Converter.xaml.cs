@@ -37,8 +37,26 @@ public partial class Converter : ContentPage
             
         }
     }
+
+
+    private void converter(){
+        if(state_cur1 && state_cur2){
+            
+
+
+
+        }
+
+
+
+    }
     private void OnCur1Changed(object sender, EventArgs e){}
     private void OnCur2Changed(object sender, EventArgs e){}
+    public void OnDateChanged(object sender, EventArgs e){
+        this.getTodayRates(datePicker.Date);
+    }
+
+    
 
 
 

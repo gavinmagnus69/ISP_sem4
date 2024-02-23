@@ -14,7 +14,7 @@ public class RateService : IRateService
     }
     public async Task<IEnumerable<Rate>> GetRates(DateTime date)
     {
-        HttpResponseMessage response = await client.GetAsync("https://api.nbrb.by/exrates/rates?periodicity=0"); 
+        HttpResponseMessage response = await client.GetAsync($"https://api.nbrb.by/exrates/rates?ondate={date.ToString("yyyy-MM-dd")}&periodicity=0"); 
         try{
             response.EnsureSuccessStatusCode();
         }

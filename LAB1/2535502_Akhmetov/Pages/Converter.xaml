@@ -18,13 +18,11 @@
                         RowDefinitions = "*, *"
                         BackgroundColor = "Red"
                         >
-                        <Label 
-                            Text = "Select a date"
-                            BackgroundColor = "Black"
-                        />
+                       
                         <DatePicker x:Name="datePicker"
                             BackgroundColor = "Blue"
                             Grid.Row = "1"
+                            DateSelected = "OnDateChanged"
                          />
                         <Picker Grid.Row = "0"
                                 Grid.Column = "1"
@@ -57,7 +55,17 @@
                                     <x:String>GBP</x:String>
                                 </Picker.Items>                 
                 
-                        </Picker> 
+                        </Picker>
+                        <Entry x:Name = "Cur1Entry"
+                            Grid.Row = "1"
+                            Grid.Column = "1"
+                            Text = "0"
+                        />
+                        <Entry x:Name = "Cur2Entry"
+                            Grid.Row = "1"
+                            Grid.Column = "2"
+                            Text = "0"
+                        /> 
 
                         
 
