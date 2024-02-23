@@ -10,9 +10,55 @@
               <Grid RowDefinitions = "*, 3*, 2*">
                     <Label Grid.Row = "0"
                             BackgroundColor = "Blue"/>
+
+
+
                     <Grid Grid.Row = "1"
                         ColumnDefinitions = "*,*,*"
-                        RowDefinitions = "*">
+                        RowDefinitions = "*, *"
+                        BackgroundColor = "Red"
+                        >
+                        <Label 
+                            Text = "Select a date"
+                            BackgroundColor = "Black"
+                        />
+                        <DatePicker x:Name="datePicker"
+                            BackgroundColor = "Blue"
+                            Grid.Row = "1"
+                         />
+                        <Picker Grid.Row = "0"
+                                Grid.Column = "1"
+                            x:Name = "Currency1"
+                            Title = "Select currency to convert"
+                            SelectedIndexChanged = "OnCur1Changed"
+                        >
+                                <Picker.Items>
+                                    <x:String>USD</x:String>
+                                    <x:String>EUR</x:String>
+                                    <x:String>RUB</x:String>
+                                    <x:String>CHF</x:String>
+                                    <x:String>CNY</x:String>
+                                    <x:String>GBP</x:String>
+                                </Picker.Items>                 
+                
+                        </Picker>
+                        <Picker Grid.Row = "0"
+                                Grid.Column = "2"
+                            x:Name = "Currency2"
+                            Title = "Select currency to convert"
+                            SelectedIndexChanged = "OnCur2Changed"
+                        >
+                                <Picker.Items>
+                                    <x:String>USD</x:String>
+                                    <x:String>EUR</x:String>
+                                    <x:String>RUB</x:String>
+                                    <x:String>CHF</x:String>
+                                    <x:String>CNY</x:String>
+                                    <x:String>GBP</x:String>
+                                </Picker.Items>                 
+                
+                        </Picker> 
+
                         
 
                     </Grid>
@@ -57,6 +103,49 @@
                             Text = "1 GBP =" 
                             Grid.Row = "5" 
                             BackgroundColor = "Yellow"/>
+                        <Label
+                            x:Name = "UsdLabel"
+                            HorizontalOptions = "Center"
+                            VerticalOptions = "Center"
+                            Grid.Row = "0"
+                            Grid.Column = "1" 
+                            BackgroundColor = "Black"/>
+                        <Label
+                            x:Name = "EurLabel"
+                            HorizontalOptions = "Center"
+                            VerticalOptions = "Center"
+                            Grid.Row = "1"
+                            Grid.Column = "1" 
+                            BackgroundColor = "Black"/>    
+                        <Label
+                            x:Name = "RubLabel"
+                            HorizontalOptions = "Center"
+                            VerticalOptions = "Center"
+                            Grid.Row = "2"
+                            Grid.Column = "1" 
+                            BackgroundColor = "Black"/>
+                        <Label
+                            x:Name = "ChfLabel"
+                            HorizontalOptions = "Center"
+                            VerticalOptions = "Center"
+                            Grid.Row = "3"
+                            Grid.Column = "1" 
+                            BackgroundColor = "Black"/>
+                        <Label
+                            x:Name = "CnyLabel"
+                            HorizontalOptions = "Center"
+                            VerticalOptions = "Center"
+                            Grid.Row = "4"
+                            Grid.Column = "1" 
+                            BackgroundColor = "Black"/>
+                        <Label
+                            x:Name = "GbpLabel"
+                            HorizontalOptions = "Center"
+                            VerticalOptions = "Center"
+                            Grid.Row = "5"
+                            Grid.Column = "1" 
+                            BackgroundColor = "Black"/>             
+                            
                     </Grid>                
 
 

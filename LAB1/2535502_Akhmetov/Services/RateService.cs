@@ -23,7 +23,7 @@ public class RateService : IRateService
             Debug.WriteLine("Error ocured in request {0}", x.Message);
             return null;
         }
-        return JsonSerializer.Deserialize<IEnumerable<Rate>>(await response.Content.ReadAsStreamAsync());
+        return await JsonSerializer.DeserializeAsync<IEnumerable<Rate>>(await response.Content.ReadAsStreamAsync());
 
     }
 //https://api.nbrb.by/exrates/rates?periodicity=0 to get all currencies to bel rub
