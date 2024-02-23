@@ -1,5 +1,4 @@
-﻿using Android.App;
-using Microsoft.Extensions.Logging;
+﻿using Microsoft.Extensions.Logging;
 using System.Net.Http;
 
 namespace _2535502_Akhmetov;
