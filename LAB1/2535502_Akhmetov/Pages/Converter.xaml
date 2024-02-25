@@ -60,11 +60,15 @@
                             Grid.Row = "1"
                             Grid.Column = "1"
                             Text = "0"
+                            TextChanged = "OnEntryTextChanged1"
+                            Keyboard = "Numeric"
                         />
                         <Entry x:Name = "Cur2Entry"
                             Grid.Row = "1"
                             Grid.Column = "2"
                             Text = "0"
+                            TextChanged = "OnEntryTextChanged2"
+                            Keyboard = "Numeric"
                         /> 
 
                         

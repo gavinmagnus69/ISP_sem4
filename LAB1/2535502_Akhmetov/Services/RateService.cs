@@ -1,5 +1,4 @@
 namespace _2535502_Akhmetov;
-
 using System.Diagnostics;
 using System.Text.Json;
 using NbrbAPI.Models;
