@@ -6,6 +6,7 @@ namespace _2535502_Akhmetov;
 public partial class Converter : ContentPage
 {
     IRateService service = new RateService(new HttpClient());
+    List<string> abbreviations = new List<string>{"USD","EUR", "RUB", "CHF", "CNY", "GBP"};
     bool state_cur1 = false;
     bool state_cur2 = false;
     Dictionary<string, Tuple<int, decimal>> values;
@@ -20,6 +21,11 @@ public partial class Converter : ContentPage
         IEnumerable<Rate> miau = await service.GetRates(dt);
         foreach (var item in miau)
         {
+            // if(abbreviations.Contains(item.Cur_Abbreviation)){
+
+            // }
+
+            //we could just add labels without ifs
             if(item.Cur_Abbreviation == "USD"){
                 UsdLabel.Text = item.Cur_OfficialRate.ToString();
                 values[item.Cur_Abbreviation] = new Tuple<int, decimal>(item.Cur_Scale, (decimal)item.Cur_OfficialRate); 
@@ -101,10 +107,8 @@ public partial class Converter : ContentPage
     private void OnCur2Changed(object sender, EventArgs e){
         if(Currency2.SelectedIndex != -1){
             state_cur2 = true;
-        
         }
         else{
-       
             state_cur2 = false;
         }
     }
