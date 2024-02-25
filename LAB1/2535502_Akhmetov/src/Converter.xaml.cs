@@ -111,17 +111,4 @@ public partial class Converter : ContentPage
     public void OnDateChanged(object sender, EventArgs e){
         this.getTodayRates(datePicker.Date);
     }
-
-    
-
-
-
-
-
-
-
-
-
-
-    
 }
