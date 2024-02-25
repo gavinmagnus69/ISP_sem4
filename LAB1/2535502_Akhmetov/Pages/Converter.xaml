@@ -32,12 +32,7 @@
                             SelectedIndexChanged = "OnCur1Changed"
                         >
                                 <Picker.Items>
-                                    <x:String>USD</x:String>
-                                    <x:String>EUR</x:String>
-                                    <x:String>RUB</x:String>
-                                    <x:String>CHF</x:String>
-                                    <x:String>CNY</x:String>
-                                    <x:String>GBP</x:String>
+                                    
                                 </Picker.Items>                 
                 
                         </Picker>
@@ -48,12 +43,7 @@
                             SelectedIndexChanged = "OnCur2Changed"
                         >
                                 <Picker.Items>
-                                    <x:String>USD</x:String>
-                                    <x:String>EUR</x:String>
-                                    <x:String>RUB</x:String>
-                                    <x:String>CHF</x:String>
-                                    <x:String>CNY</x:String>
-                                    <x:String>GBP</x:String>
+                                    
                                 </Picker.Items>                 
                 
                         </Picker>
@@ -77,88 +67,14 @@
                     </Grid>
                     
                     <Grid Grid.Row = "2" 
-                        RowDefinitions = "*,*,*,*,*,*"
                         ColumnDefinitions = "2*,3*,*"
+                        x:Name = "LabelsGrid"
                         >
-                        <Label
-                            HorizontalOptions = "Center"
-                            VerticalOptions = "Center"
-                            Text = "1 USD ="
-                            BackgroundColor = "Green"/>
-                        <Label
-                            HorizontalOptions = "Center"
-                            VerticalOptions = "Center"
-                            Text = "1 EUR =" 
-                            BackgroundColor = "Green"
-                            Grid.Row = "1" 
-                        />
-                        <Label
-                            HorizontalOptions = "Center"
-                            VerticalOptions = "Center"
-                            Text = "100 RUB =" 
-                            Grid.Row = "2" 
-                            BackgroundColor = "Green"/>
-                        <Label
-                            HorizontalOptions = "Center"
-                            VerticalOptions = "Center"
-                            Text = "1 CHF =" 
-                            Grid.Row = "3" 
-                            BackgroundColor = "Green"/>
-                        <Label 
-                            HorizontalOptions = "Center"
-                            VerticalOptions = "Center"
-                            Text = "10 CNY ="
-                            Grid.Row = "4" 
-                            BackgroundColor = "Green"/>
-                        <Label
-                            HorizontalOptions = "Center"
-                            VerticalOptions = "Center"
-                            Text = "1 GBP =" 
-                            Grid.Row = "5" 
-                            BackgroundColor = "Green"/>
-                        <Label
-                            x:Name = "UsdLabel"
-                            HorizontalOptions = "Center"
-                            VerticalOptions = "Center"
-                            Grid.Row = "0"
-                            Grid.Column = "1" 
-                            BackgroundColor = "Black"/>
-                        <Label
-                            x:Name = "EurLabel"
-                            HorizontalOptions = "Center"
-                            VerticalOptions = "Center"
-                            Grid.Row = "1"
-                            Grid.Column = "1" 
-                            BackgroundColor = "Black"/>    
-                        <Label
-                            x:Name = "RubLabel"
-                            HorizontalOptions = "Center"
-                            VerticalOptions = "Center"
-                            Grid.Row = "2"
-                            Grid.Column = "1" 
-                            BackgroundColor = "Black"/>
-                        <Label
-                            x:Name = "ChfLabel"
-                            HorizontalOptions = "Center"
-                            VerticalOptions = "Center"
-                            Grid.Row = "3"
-                            Grid.Column = "1" 
-                            BackgroundColor = "Black"/>
-                        <Label
-                            x:Name = "CnyLabel"
-                            HorizontalOptions = "Center"
-                            VerticalOptions = "Center"
-                            Grid.Row = "4"
-                            Grid.Column = "1" 
-                            BackgroundColor = "Black"/>
-                        <Label
-                            x:Name = "GbpLabel"
-                            HorizontalOptions = "Center"
-                            VerticalOptions = "Center"
-                            Grid.Row = "5"
-                            Grid.Column = "1" 
-                            BackgroundColor = "Black"/>             
-                            
+                        <VerticalStackLayout Grid.Column = "0" x:Name = "AbrColumn">
+                        </VerticalStackLayout>
+                        <VerticalStackLayout Grid.Column = "1" x:Name = "RateColumn">
+                        </VerticalStackLayout>
+                                  
                     </Grid>                
 
 

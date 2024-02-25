@@ -21,36 +21,18 @@ public partial class Converter : ContentPage
         IEnumerable<Rate> miau = await service.GetRates(dt);
         foreach (var item in miau)
         {
-            // if(abbreviations.Contains(item.Cur_Abbreviation)){
-
-            // }
-
-            //we could just add labels without ifs
-            if(item.Cur_Abbreviation == "USD"){
-                UsdLabel.Text = item.Cur_OfficialRate.ToString();
+            if(abbreviations.Contains(item.Cur_Abbreviation)){
+                this.Currency1.Items.Add(item.Cur_Abbreviation);
+                this.Currency2.Items.Add(item.Cur_Abbreviation);
                 values[item.Cur_Abbreviation] = new Tuple<int, decimal>(item.Cur_Scale, (decimal)item.Cur_OfficialRate); 
-            }
-            if(item.Cur_Abbreviation == "EUR"){
-                EurLabel.Text = item.Cur_OfficialRate.ToString();
-                values[item.Cur_Abbreviation] = new Tuple<int, decimal>(item.Cur_Scale, (decimal)item.Cur_OfficialRate); 
-            }
-            if(item.Cur_Abbreviation == "RUB"){
-                RubLabel.Text = item.Cur_OfficialRate.ToString();
-                values[item.Cur_Abbreviation] = new Tuple<int, decimal>(item.Cur_Scale, (decimal)item.Cur_OfficialRate); 
-            }
-            if(item.Cur_Abbreviation == "CHF"){
-                ChfLabel.Text = item.Cur_OfficialRate.ToString();
-                values[item.Cur_Abbreviation] = new Tuple<int, decimal>(item.Cur_Scale, (decimal)item.Cur_OfficialRate); 
-            }
-            if(item.Cur_Abbreviation == "CNY"){
-                CnyLabel.Text = item.Cur_OfficialRate.ToString();
-                values[item.Cur_Abbreviation] = new Tuple<int, decimal>(item.Cur_Scale, (decimal)item.Cur_OfficialRate); 
-            }
-            if(item.Cur_Abbreviation == "GBP"){
-                GbpLabel.Text = item.Cur_OfficialRate.ToString();
-                values[item.Cur_Abbreviation] = new Tuple<int, decimal>(item.Cur_Scale, (decimal)item.Cur_OfficialRate); 
-            }
-            
+                var tmp_label_ab = new Label();
+                tmp_label_ab.Text = item.Cur_Abbreviation;
+                tmp_label_ab.HorizontalOptions = LayoutOptions.Center;
+                AbrColumn.Children.Add(tmp_label_ab);
+                var tmp_label_rate = new Label();
+                tmp_label_rate.Text = item.Cur_OfficialRate.ToString();
+                RateColumn.Children.Add(tmp_label_rate);
+            }   
         }
     }
 
