@@ -51,51 +51,60 @@ public partial class Converter : ContentPage
 
     private void converter(int state){
         if(state_cur1 && state_cur2){
-            Debug.WriteLine("================>called");
             if(state == 1){
                 double to_brub = (double)values[Currency1.Items[Currency1.SelectedIndex]].Item2 / values[Currency1.Items[Currency1.SelectedIndex]].Item1 * Double.Parse(Cur1Entry.Text);
-                Debug.WriteLine(to_brub);
                 double to_cur =  to_brub / (double)values[Currency2.Items[Currency2.SelectedIndex]].Item2 * values[Currency2.Items[Currency2.SelectedIndex]].Item1;
-                Cur2Entry.Text = Math.Round(to_cur, 3).ToString();
+                //Cur2Entry.Text = Math.Round(to_cur, 3).ToString();
+                Cur2Entry.Text = String.Format("{0:0.00}", to_cur);
             }
             if(state == 2){
                 double to_brub = (double)values[Currency2.Items[Currency2.SelectedIndex]].Item2 / values[Currency2.Items[Currency2.SelectedIndex]].Item1 * Double.Parse(Cur2Entry.Text);
                 double to_cur =  to_brub / (double)values[Currency1.Items[Currency1.SelectedIndex]].Item2 * values[Currency1.Items[Currency1.SelectedIndex]].Item1;
-                Cur1Entry.Text = Math.Round(to_cur, 3).ToString();
+                //Cur1Entry.Text = Math.Round(to_cur, 3).ToString();
+                Cur1Entry.Text = String.Format("{0:0.00}", to_cur);
             }
         }
     }
     
     void OnEntryTextChanged1(object sender, TextChangedEventArgs e)
     {
-        Debug.WriteLine("==============>Text changed");
+         if(Cur1Entry.Text == "," || Cur1Entry.Text == ".")
+        {
+            Cur1Entry.Text = "0";
+        }
         if(Cur1Entry.Text != ""){
             this.converter(1);
         }
+       
+       
+        
     }
     void OnEntryTextChanged2(object sender, TextChangedEventArgs e)
     {
-        if(Cur1Entry.Text != ""){
+        if(Cur2Entry.Text == "," || Cur2Entry.Text == ".")
+        {
+            Cur2Entry.Text = "0";
+        }
+        if(Cur2Entry.Text != ""){
             this.converter(2);
         }
+        
     }
     private void OnCur1Changed(object sender, EventArgs e){
         if(Currency1.SelectedIndex != -1){
             state_cur1 = true;
-            Debug.WriteLine("==============>state set");
         }
         else{
-            Debug.WriteLine("==============>state unset");
             state_cur1 = false;
         }
     }
     private void OnCur2Changed(object sender, EventArgs e){
         if(Currency2.SelectedIndex != -1){
             state_cur2 = true;
-            Debug.WriteLine("===============>state set");
+        
         }
         else{
-            Debug.WriteLine("==============>state unset");
+       
             state_cur2 = false;
         }
     }

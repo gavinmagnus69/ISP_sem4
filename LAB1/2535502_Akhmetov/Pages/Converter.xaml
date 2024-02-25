@@ -9,18 +9,18 @@
             <ScrollView>
               <Grid RowDefinitions = "*, 3*, 2*">
                     <Label Grid.Row = "0"
-                            BackgroundColor = "Blue"/>
+                            BackgroundColor = "Black"/>
 
 
 
                     <Grid Grid.Row = "1"
                         ColumnDefinitions = "*,*,*"
                         RowDefinitions = "*, *"
-                        BackgroundColor = "Red"
+                        BackgroundColor = "Black"
                         >
                        
                         <DatePicker x:Name="datePicker"
-                            BackgroundColor = "Blue"
+                            BackgroundColor = "Black"
                             Grid.Row = "1"
                             DateSelected = "OnDateChanged"
                          />
